@@ -120,6 +120,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding-top: 60px;
 }
 
 /* Top info bar */
