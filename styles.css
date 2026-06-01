@@ -128,9 +128,9 @@ body {
   position: relative;
   z-index: 10;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  padding: 28px 40px;
+  padding: 16px 40px;
   gap: 24px;
 }
 
@@ -139,21 +139,22 @@ body {
   font-weight: 800;
   color: var(--ink);
   letter-spacing: 0.1em;
-  line-height: 1.55;
+  line-height: 1;
   text-transform: uppercase;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .htb-meta {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  flex-direction: row;
+  gap: 8px;
   font-size: 0.6rem;
   color: var(--ink-soft);
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  line-height: 1.5;
-  padding-top: 1px;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .htb-item {
