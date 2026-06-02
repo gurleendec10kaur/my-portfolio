@@ -24,27 +24,6 @@ body {
 }
 
 /* ── Floating Resume button ───────────────── */
-.float-resume {
-  position: fixed;
-  top: 18px;
-  right: 40px;
-  z-index: 300;
-  background: var(--ink);
-  color: var(--yellow);
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 9px 22px;
-  border-radius: 100px;
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  box-shadow: 0 4px 18px rgba(17,18,20,0.22);
-  transition: background 0.2s, transform 0.18s, box-shadow 0.2s;
-}
-.float-resume:hover {
-  background: #2a2d38;
-  transform: translateY(-2px);
-  box-shadow: 0 7px 22px rgba(17,18,20,0.3);
-}
 
 /* ── Persistent nav ───────────────────────── */
 .sticky-nav {
@@ -110,6 +89,12 @@ body {
   color: rgba(17,18,20,0.7) !important;
 }
 .sn-btn-ghost:hover { border-color: var(--ink); color: var(--ink) !important; }
+
+.sn-btn-solid {
+  background: var(--ink);
+  color: var(--yellow) !important;
+}
+.sn-btn-solid:hover { background: #2a2d38; }
 
 /* ── Hero ─────────────────────────────────── */
 .hero {
@@ -1045,7 +1030,6 @@ body {
 }
 
 @media (max-width: 640px) {
-  .float-resume { right: 20px; top: 14px; }
   .sticky-nav { padding: 14px 20px; }
   .sn-links a:not(.sn-btn) { display: none; }
 
