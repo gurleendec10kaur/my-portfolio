@@ -500,6 +500,38 @@ body {
 }
 .la-link:hover { background: var(--yellow-dk); transform: translateY(-1px); }
 
+.la-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.la-link-secondary {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.79rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1.5px solid rgba(17,18,20,0.25);
+  padding: 9px 18px;
+  border-radius: 100px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.la-link-secondary:hover { border-color: var(--ink); background: rgba(17,18,20,0.04); }
+
+.la-highlights {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0 4px;
+  flex-wrap: wrap;
+}
+.lh-item { display: flex; flex-direction: column; gap: 2px; }
+.lh-val { font-size: 1rem; font-weight: 800; color: var(--ink); line-height: 1; }
+.lh-lbl { font-size: 0.6rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
 /* ── Projects ─────────────────────────────── */
 .projects {
   background: var(--white);
