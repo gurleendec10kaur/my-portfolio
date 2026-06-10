@@ -467,6 +467,15 @@ body {
   color: var(--muted);
 }
 
+.la-tag-prd {
+  background: rgba(245,193,24,0.18);
+  color: #8a6a00;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.la-tag-prd:hover { background: rgba(245,193,24,0.38); }
+
 .la-name {
   font-family: 'DM Serif Display', serif;
   font-size: 1.3rem;
