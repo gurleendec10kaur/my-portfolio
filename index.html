@@ -49,32 +49,60 @@
         </div>
       </div>
 
-      <!-- Right: photo + floating badges -->
+      <!-- Right: photo carousel -->
       <div class="hero-right">
-        <div class="hero-img-wrap">
-          <div class="himg-blob"></div>
-          <img src="My pics/IMG_20251226_112634.JPG" alt="Gurleen Kaur" />
+        <div class="hero-carousel">
 
-          <div class="hbadge hbadge-1">
-            <span class="hbadge-icon">◈</span>
-            <span>Product Strategy</span>
+          <div class="hc-slides" id="heroSlides">
+
+            <!-- Slide 1: Certifications & core -->
+            <div class="hc-slide active">
+              <div class="hero-img-wrap">
+                <div class="himg-blob"></div>
+                <img src="My pics/IMG_20251226_112634.JPG" alt="Gurleen Kaur" />
+                <div class="hbadge hbadge-1"><span class="hbadge-icon">◈</span><span>Product Strategy</span></div>
+                <div class="hbadge hbadge-2"><span class="hbadge-icon">◉</span><span>PSPO Certified</span></div>
+                <div class="hbadge hbadge-3"><span class="hbadge-icon">◐</span><span>Six Sigma BB</span></div>
+                <div class="hbadge hbadge-4"><span class="hbadge-icon">◑</span><span>AI / RAG</span></div>
+                <div class="hbadge hbadge-5"><span class="hbadge-icon">◈</span><span>Solo Builder</span></div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Growth & product execution -->
+            <div class="hc-slide">
+              <div class="hero-img-wrap">
+                <div class="himg-blob"></div>
+                <img src="My pics/IMG_20260424_145934.JPG" alt="Gurleen Kaur" />
+                <div class="hbadge hbadge-1"><span class="hbadge-icon">◈</span><span>Growth Strategy</span></div>
+                <div class="hbadge hbadge-2"><span class="hbadge-icon">◉</span><span>CRM Design</span></div>
+                <div class="hbadge hbadge-3"><span class="hbadge-icon">◐</span><span>Quick Commerce</span></div>
+                <div class="hbadge hbadge-4"><span class="hbadge-icon">◑</span><span>User Research</span></div>
+                <div class="hbadge hbadge-5"><span class="hbadge-icon">◈</span><span>B2B SaaS</span></div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Delivery & analytics -->
+            <div class="hc-slide">
+              <div class="hero-img-wrap">
+                <div class="himg-blob"></div>
+                <img src="My pics/IMG_20251227_172321.JPG" alt="Gurleen Kaur" />
+                <div class="hbadge hbadge-1"><span class="hbadge-icon">◈</span><span>SQL & Analytics</span></div>
+                <div class="hbadge hbadge-2"><span class="hbadge-icon">◉</span><span>Go-to-Market</span></div>
+                <div class="hbadge hbadge-3"><span class="hbadge-icon">◐</span><span>Stakeholder Mgmt</span></div>
+                <div class="hbadge hbadge-4"><span class="hbadge-icon">◑</span><span>Agile / Scrum</span></div>
+                <div class="hbadge hbadge-5"><span class="hbadge-icon">◈</span><span>0→1 Products</span></div>
+              </div>
+            </div>
+
           </div>
-          <div class="hbadge hbadge-2">
-            <span class="hbadge-icon">◉</span>
-            <span>PSPO Certified</span>
+
+          <!-- Dot navigation -->
+          <div class="hc-dots">
+            <button class="hc-dot active" data-idx="0" aria-label="Slide 1"></button>
+            <button class="hc-dot" data-idx="1" aria-label="Slide 2"></button>
+            <button class="hc-dot" data-idx="2" aria-label="Slide 3"></button>
           </div>
-          <div class="hbadge hbadge-3">
-            <span class="hbadge-icon">◐</span>
-            <span>Six Sigma BB</span>
-          </div>
-          <div class="hbadge hbadge-4">
-            <span class="hbadge-icon">◑</span>
-            <span>AI / RAG</span>
-          </div>
-          <div class="hbadge hbadge-5">
-            <span class="hbadge-icon">◈</span>
-            <span>Solo Builder</span>
-          </div>
+
         </div>
       </div>
 
@@ -448,6 +476,36 @@
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
+
+    // Hero photo carousel
+    (function () {
+      const slides = document.querySelectorAll('.hc-slide');
+      const dots   = document.querySelectorAll('.hc-dot');
+      let current  = 0;
+      let timer;
+
+      function goTo(idx) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (idx + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      function startTimer() {
+        timer = setInterval(() => goTo(current + 1), 4500);
+      }
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          clearInterval(timer);
+          goTo(i);
+          startTimer();
+        });
+      });
+
+      startTimer();
+    })();
   </script>
 
 </body>

@@ -324,6 +324,60 @@ body {
   50%       { transform: translateY(-9px); }
 }
 
+/* ── Hero Carousel ────────────────────────── */
+.hero-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hc-slides {
+  position: relative;
+  width: 470px;
+  height: 444px;
+}
+
+.hc-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  pointer-events: none;
+}
+
+.hc-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.hc-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.hc-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 100px;
+  background: rgba(26,43,35,0.22);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s, width 0.3s;
+}
+
+.hc-dot.active {
+  background: var(--ink);
+  width: 24px;
+}
+
 /* ── Shared section utilities ─────────────── */
 .section-inner {
   max-width: 880px;
@@ -1038,6 +1092,7 @@ body {
   .hero-actions { justify-content: center; }
   .hero-sub { max-width: 480px; }
   .hero-img-wrap { width: 280px; height: 350px; }
+  .hc-slides { width: 410px; height: 390px; }
   .hbadge-1 { top: -16px; left: -40px; }
   .hbadge-2 { top: 30px;  right: -50px; }
   .hbadge-3 { top: 130px; left: -60px; }
@@ -1079,6 +1134,7 @@ body {
 
   .hero-content { padding: 16px 24px 60px; gap: 50px; }
   .hero-img-wrap { width: 230px; height: 290px; }
+  .hc-slides { width: 340px; height: 320px; }
   .hbadge { font-size: 0.66rem; padding: 7px 12px 7px 10px; }
   .hbadge-1 { top: -14px; left: -30px; }
   .hbadge-2 { top: 24px;  right: -42px; }
