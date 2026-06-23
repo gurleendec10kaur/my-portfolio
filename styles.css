@@ -102,18 +102,36 @@ body {
   width: 100%;
   min-height: 100vh;
   background:
-    radial-gradient(ellipse at 68% 38%, rgba(255,255,255,0.18) 0%, transparent 55%),
-    linear-gradient(
-      168deg,
-      #C8EEF8 0%,
-      #5BBFCC 35%,
-      #1A9DB2 65%,
-      #DFC992 100%
-    );
+    linear-gradient(rgba(11,41,54,0.45), rgba(11,41,54,0.45)),
+    url('screenshots/beach') center/cover no-repeat;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   padding-top: 60px;
+}
+
+/* Hero text overrides for photo background */
+.hero .htb-brand,
+.hero .htb-item,
+.hero .hero-heading,
+.hero .hero-heading em { color: #ffffff; }
+
+.hero .htb-meta,
+.hero .htb-item,
+.hero .hero-eyebrow,
+.hero .hero-sub { color: rgba(255,255,255,0.8); }
+
+.hero .htb-item:hover { color: #ffffff; }
+
+.hero .htb-lines span { background: rgba(255,255,255,0.65); }
+
+.hero .ha-ghost {
+  border-color: rgba(255,255,255,0.55);
+  color: #ffffff;
+}
+.hero .ha-ghost:hover {
+  border-color: #ffffff;
+  background: rgba(255,255,255,0.1);
 }
 
 /* Top info bar */
