@@ -101,37 +101,11 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background:
-    linear-gradient(rgba(11,41,54,0.45), rgba(11,41,54,0.45)),
-    url('screenshots/beach') center/cover no-repeat;
+  background: var(--yellow);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   padding-top: 60px;
-}
-
-/* Hero text overrides for photo background */
-.hero .htb-brand,
-.hero .htb-item,
-.hero .hero-heading,
-.hero .hero-heading em { color: #ffffff; }
-
-.hero .htb-meta,
-.hero .htb-item,
-.hero .hero-eyebrow,
-.hero .hero-sub { color: rgba(255,255,255,0.8); }
-
-.hero .htb-item:hover { color: #ffffff; }
-
-.hero .htb-lines span { background: rgba(255,255,255,0.65); }
-
-.hero .ha-ghost {
-  border-color: rgba(255,255,255,0.55);
-  color: #ffffff;
-}
-.hero .ha-ghost:hover {
-  border-color: #ffffff;
-  background: rgba(255,255,255,0.1);
 }
 
 /* Top info bar */
