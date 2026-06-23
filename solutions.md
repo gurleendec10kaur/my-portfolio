@@ -13,4 +13,4 @@ When writing a LinkedIn post for any solution, read that solution's file first.
 | Zepto Growth | `solutions/zepto-growth.md` | https://zepto-prototype-sepia.vercel.app |
 | WhatsApp Re-engagement | `solutions/whatsapp-reengagement.md` | https://whatsapp-prototype-khaki.vercel.app |
 | Missionaries & Cannibals | `solutions/missionaries-cannibals.md` | https://missionaries-cannibals-kebkxr8nysuar8evftejec.streamlit.app |
-| PRD Generator | `solutions/prd-generator.md` | [FILL IN — Vercel deployment URL] |
+| PRD Generator | `solutions/prd-generator.md` | https://prd-generator-beta.vercel.app |

@@ -1,6 +1,6 @@
 ---
 solution: PRD Generator — AI-Powered Multi-Agent PRD System
-live_url: [FILL IN — Vercel deployment URL]
+live_url: https://prd-generator-beta.vercel.app
 tags: Multi-Agent AI · Full Stack · Solo Build
 ---
 
