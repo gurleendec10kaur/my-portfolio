@@ -101,7 +101,15 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: var(--yellow);
+  background:
+    radial-gradient(ellipse at 68% 38%, rgba(255,255,255,0.18) 0%, transparent 55%),
+    linear-gradient(
+      168deg,
+      #C8EEF8 0%,
+      #5BBFCC 35%,
+      #1A9DB2 65%,
+      #DFC992 100%
+    );
   overflow: hidden;
   display: flex;
   flex-direction: column;
