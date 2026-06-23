@@ -248,6 +248,29 @@
           </div>
         </div>
 
+        <!-- PRD Generator -->
+        <div class="la-card">
+          <a href="#" target="_blank" rel="noopener" class="la-preview-link">
+            <div class="la-preview">
+              <img src="screenshots/PRDgenerator.png" alt="PRD Generator app" />
+              <div class="la-preview-overlay"><span class="la-open-btn">Open app ↗</span></div>
+            </div>
+          </a>
+          <div class="la-info">
+            <div class="la-tags"><span class="la-tag">Multi-Agent AI</span><span class="la-tag">Agentic AI</span><span class="la-tag">Full Stack</span><span class="la-tag">Solo build</span></div>
+            <h3 class="la-name">PRD Generator</h3>
+            <p class="la-desc">6-agent AI pipeline that turns a problem statement into a publication-ready PRD. Research, personas, RICE prioritisation, KPIs, and a Critic agent — all streaming in real time. Built with Claude Sonnet 4.6, Tavily web search, and Supabase.</p>
+            <div class="la-highlights">
+              <div class="lh-item"><span class="lh-val">6</span><span class="lh-lbl">AI agents</span></div>
+              <div class="lh-item"><span class="lh-val">Parallel</span><span class="lh-lbl">Phase 1 agents</span></div>
+              <div class="lh-item"><span class="lh-val">SSE</span><span class="lh-lbl">Real-time stream</span></div>
+            </div>
+            <div class="la-actions">
+              <a href="#" target="_blank" rel="noopener" class="la-link">Live app ↗</a>
+            </div>
+          </div>
+        </div>
+
         <!-- WhatsApp -->
         <div class="la-card">
           <a href="https://whatsapp-prototype-khaki.vercel.app" target="_blank" rel="noopener" class="la-preview-link">
@@ -449,6 +472,15 @@
       nav.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
+    // Trigger card pop-in animation when Work section scrolls into view
+    const grid = document.querySelector('.la-grid');
+    const cardObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        document.querySelectorAll('.la-card').forEach(card => card.classList.add('pop-in'));
+        cardObserver.disconnect();
+      }
+    }, { threshold: 0.1 });
+    cardObserver.observe(grid);
   </script>
 
 </body>
